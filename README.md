@@ -22,10 +22,22 @@ Check [kinematic page](./doc/kinematic.md) for more information about this kinem
 Install kinematic file
 <pre>
 cd ~
-git clone https://github.com/SnakeOilXY/klipper-extended-corexy-kinematic
+git clone https://github.com/LynxCrew/klipper-extended-corexy-kinematic
 cd klipper-extended-corexy-kinematic
 ./install.sh
 </pre>
+
+add this to your moonraker.conf:
+```
+[update_manager extended_corexy]
+type: git_repo
+channel: dev
+path: ~/klipper-extended-corexy-kinematic
+origin: https://github.com/LynxCrew/klipper-extended-corexy-kinematic.git
+managed_services: klipper
+primary_branch: master
+install_script: install.sh
+```
 
 ## 4. Test data
 
